@@ -681,6 +681,7 @@ body {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .review-form-input-wrapper {
@@ -724,7 +725,7 @@ body {
   font-size: var(--small-font-size);
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--navy-blue-color);
+  color: var(--navyblue-modal);
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal);
