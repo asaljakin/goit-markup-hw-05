@@ -343,23 +343,27 @@
             </li>
           </ul>
         </div>
-        <form class="footer-subscribe-form">
-          <label class="footer-subscribe">
-            <span class="footer-subscribe-desc">Subscribe</span>
-            <input
-              class="footer-subscribe-input"
-              type="email"
-              name="user_email"
-              placeholder="E-mail"
-              id="subscribe"
-              required
-            />
-          </label>
-          <button class="footer-subscribe-btn" type="submit">Subscribe</button>
-          <svg class="footer-subscribe-btn-icon" width="24" height="20">
-            <use href="./images/icons.svg#icon-send"></use>
-          </svg>
-        </form>
+        <div class="footer-subscribe-container">
+          <p class="footer-subscribe-desc">Subscribe</p>
+          <form class="footer-subscribe-form">
+            <label class="footer-subscribe">
+              <input
+                class="footer-subscribe-input"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+                id="subscribe"
+                required
+              />
+            </label>
+            <button class="footer-subscribe-btn" type="submit">
+              Subscribe
+              <svg class="footer-subscribe-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
