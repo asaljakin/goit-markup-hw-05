@@ -508,19 +508,22 @@ body {
   fill: var(--cloude-color);
 }
 
+.footer-subscribe-container {
+  margin-right: 3px;
+  margin-left: 80px;
+}
+
 .footer-subscribe-form {
   position: relative;
-  display: inline-flex;
+  display: flex;
   width: 100%;
-  justify-content: right;
-  align-items: end;
-  padding-right: 3px;
-  margin-left: 80px;
+  gap: 24px;
 }
 
 .footer-subscribe-desc {
   color: var(--white-color);
   font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .footer-subscribe-input {
@@ -530,11 +533,9 @@ body {
   color: var(--white-color);
   font-size: var(--small-font-size);
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 16px;
-  margin-top: 16px;
-  margin-right: 24px;
   border-radius: 4px;
   border: 1px solid var(--white-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -549,23 +550,23 @@ body {
 
 .footer-subscribe-input::placeholder {
   color: var(--white-color);
-  font-size: var(--small-font-size);
-  font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.04em;
 }
 
 .footer-subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  height: 40px;
   color: var(--white-color);
-  text-align: center;
+  background-color: var(--iris-color);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  cursor: pointer;
   padding: 8px 64px 8px 24px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: var(--iris-color);
   border: none;
+  border-radius: 4px;
   transition: background-color var(--transition-dur-and-func);
 }
 
@@ -573,7 +574,8 @@ body {
   position: absolute;
   top: 50%;
   right: 24px;
-  transform: translateY(50%);
+  margin-left: 16px;
+  transform: translateY(-50%);
 }
 
 .footer-subscribe-btn:hover,
@@ -651,6 +653,164 @@ body {
   pointer-events: none;
 }
 /* ============= /PAGE MODAL ============= */
+
+/* ============= PAGE MODAL FORM============= */
+.review-form-description {
+  color: var(--navy-blue-color);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.review-form-inputs-conteiner {
+  margin-bottom: 8px;
+}
+
+.review-form-comment-conteiner {
+  margin-bottom: 16px;
+}
+
+.review-form-checkbox-conteiner {
+  margin-bottom: 24px;
+}
+
+.review-form-field {
+  display: block;
+  color: var(--light-slate);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+}
+
+.review-form-input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: var(--navy-blue-color);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal);
+  padding-left: 38px;
+  outline: transparent;
+  outline-offset: 4px;
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.review-form-input:focus {
+  border-color: var(--iris-color);
+}
+
+.review-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--navy-blue-color);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.review-form-input:focus + .review-form-input-icon {
+  fill: var(--iris-color);
+}
+
+.review-form-comment {
+  width: 100%;
+  height: 120px;
+  font-size: var(--small-font-size);
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-color);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal);
+  padding: 8px 16px;
+  resize: none;
+  outline: transparent;
+  outline-offset: 4px;
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.review-form-comment:focus {
+  border-color: var(--iris-color);
+}
+
+.review-form-comment::placeholder {
+  color: var(--navyblue-modal);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.review-form-checkbox-label {
+  display: block;
+  color: var(--light-slate);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.review-form-policy-link {
+  color: var(--iris-color);
+  line-height: 1.33;
+}
+
+.review-form-own-checkbox-conteiner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: transparent;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid var(--navyblue-modal);
+  transition: background-color var(--transition-dur-and-func),
+    fill var(--transition-dur-and-func), border var(--transition-dur-and-func);
+}
+
+.review-form-checkbox:checked
+  + .review-form-checkbox-label
+  .review-form-own-checkbox-conteiner {
+  fill: var(--cloude-color);
+  background-color: var(--ocean-color);
+  border: none;
+}
+
+.review-form-checkbox:focus + .review-form-own-checkbox {
+  outline: 2px solid var(--navy-blue-color);
+}
+
+.review-form-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  color: var(--white-color);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: none;
+  /* cursor: pointer; */
+  border-radius: 4px;
+  background-color: var(--iris-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition-dur-and-func);
+}
+
+.review-form-btn:hover,
+.review-form-btn:focus {
+  background-color: var(--ocean-color);
+}
+/* ============= /PAGE MODAL FORM============= */
 
 /* ============= PORTFOLIO FILTERS ============= */
 .portfolio-cards {
@@ -760,151 +920,3 @@ body {
   transition: transform var(--transition-dur-and-func);
 }
 /* ============= /PORTFOLIO PROJECT CARDS ============= */
-
-/* ============= PAGE MODAL FORM============= */
-.review-form-description {
-  color: var(--navy-blue-color);
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-.review-form-field {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.review-form-field-desc {
-  color: var(--light-slate);
-  font-size: var(--small-font-size);
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-}
-
-.review-form-input-wrapper {
-  display: block;
-  position: relative;
-}
-
-.review-form-input {
-  width: 100%;
-  height: 40px;
-  font-size: 18px;
-  color: var(--navy-blue-color);
-  border-radius: 4px;
-  border: 1px solid var(--navyblue-modal);
-  padding-left: 38px;
-  transition: border-color var(--transition-dur-and-func);
-}
-
-.review-form-input:focus {
-  border-color: var(--iris-color);
-  outline-color: transparent;
-  outline-offset: 4px;
-}
-
-.review-form-input-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  fill: var(--navy-blue-color);
-  transition: fill var(--transition-dur-and-func);
-}
-
-.review-form-input:focus + .review-form-input-icon {
-  fill: var(--iris-color);
-}
-
-.review-form-message {
-  width: 100%;
-  height: 120px;
-  font-size: 18px;
-  color: var(--navy-blue-color);
-  resize: none;
-  border-radius: 4px;
-  border: 1px solid var(--navyblue-modal);
-  padding: 8px 16px;
-  transition: border-color var(--transition-dur-and-func);
-}
-
-.review-form-message:focus {
-  border-color: var(--iris-color);
-  outline-color: transparent;
-  outline-offset: 4px;
-}
-
-.review-form-message::placeholder {
-  color: var(--navyblue-modal);
-  font-size: var(--small-font-size);
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-}
-
-.review-form-checkbox-label {
-  display: flex;
-  align-items: center;
-  color: var(--light-slate);
-  font-size: var(--small-font-size);
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  margin-top: 8px;
-  margin-bottom: 24px;
-}
-
-.review-form-policy-link {
-  color: var(--iris-color);
-  line-height: 1.33;
-}
-
-.review-form-checkbox {
-  position: absolute;
-  appearance: none;
-}
-
-.review-form-own-checkbox {
-  fill: transparent;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 1px solid var(--navyblue-modal);
-  padding: 2px;
-  margin-right: 8px;
-  transition: fill var(--transition-dur-and-func),
-    background-color var(--transition-dur-and-func),
-    outline var(--transition-dur-and-func);
-}
-
-.review-form-checkbox:checked + .review-form-own-checkbox {
-  fill: var(--cloude-color);
-  background-color: var(--ocean-color);
-}
-
-.review-form-checkbox:focus + .review-form-own-checkbox {
-  outline: 2px solid var(--navy-blue-color);
-}
-
-.review-form-btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 169px;
-  padding: 16px 32px;
-  color: var(--white-color);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  border: none;
-  border-radius: 4px;
-  background: var(--iris-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transition-dur-and-func);
-}
-
-.review-form-btn:hover,
-.review-form-btn:focus {
-  background-color: var(--ocean-color);
-}
-/* ============= /PAGE MODAL FORM============= */
