@@ -785,8 +785,10 @@ body {
   border: none;
 }
 
-.review-form-checkbox:focus + .review-form-own-checkbox {
-  outline: 2px solid var(--navy-blue-color);
+.review-form-checkbox:focus
+  + .review-form-checkbox-label
+  .review-form-own-checkbox-conteiner {
+  border-color: var(--ocean-color);
 }
 
 .review-form-btn {
